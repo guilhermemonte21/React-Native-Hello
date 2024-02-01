@@ -8,6 +8,7 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
+import { Home } from './src/screens/Home';
 
 
 export default () => {
@@ -27,6 +28,7 @@ export default () => {
       {/* Header */}
     <Header/>
       {/* HOMESCREEN */}
+      <Home/>
     </ContainerApp>
   );
 }
