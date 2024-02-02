@@ -1,0 +1,12 @@
+{
+    "cep": [
+        {
+            "id":1234,
+            "localidade":"Rua das Casinha",
+            "bairro": "Bairro",
+            "localidade":"XIQUE-XIQUE",
+            "estado":"Bahia",
+            "uf":"BA"
+        }
+    ]
+}
