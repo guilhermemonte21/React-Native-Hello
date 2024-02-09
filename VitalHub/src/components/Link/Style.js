@@ -13,3 +13,9 @@ export const LinkBold = styled(LinkMedium)`
     color: #4d659d ;
     font-size:16px;
 `
+export const LinkCode = styled(LinkMedium)`
+    color: #4d659d ;
+    font-size:16px;
+    align-items: center;
+    align-self: center;
+`

@@ -11,6 +11,11 @@ import {
 
 import * as SplashScreen from "expo-splash-screen"
 import { Text, View } from 'react-native';
+import { RecuperarSenha } from './src/screens/RecuperarSenha/RecuperarSenha';
+import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
+import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
+import { CriarConta } from './src/screens/CriarConta/CriarConta';
+import { Perfil } from './src/screens/Perfil/Perfil';
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
@@ -44,6 +49,32 @@ return(
         component={Login}
         options={{ title: "Login" }}
       />
+       <Stack.Screen
+          name="RecuperarSenha"
+          component={RecuperarSenha}
+          options={{title: "RecuperarSenha"}}
+        />
+        <Stack.Screen
+          name="VerificarEmail"
+          component={VerificarEmail}
+          options={{title: "VerificarEmail"}}
+        />
+        <Stack.Screen
+          name="RedefinirSenha"
+          component={RedefinirSenha}
+          options={{title: "RedefinirSenha"}}
+        />
+        <Stack.Screen
+          name="CriarConta"
+          component={CriarConta}
+          options={{title: "CriarConta"}}
+        />
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{title: "Perfil"}}
+        />
+
     </Stack.Navigator>
   </NavigationContainer>)
 }

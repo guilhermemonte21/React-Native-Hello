@@ -11,3 +11,22 @@ export const Input = styled.TextInput`
     font-family: 'MontserratAlternates_600SemiBold';
     color: #34898f;
 `
+
+export const InputVerify = styled(Input)`
+    height: 75px;
+    width: 20%;
+    font-size: 40px;
+    text-align: center;
+    padding: 0px;
+    margin-top: 0px;
+`
+export const InputPerfil =styled.TextInput`
+    
+    background-color: #F5F3F3;
+    color: black;
+    width: 90%;
+    height: 53px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-family: 'MontserratAlternates_600SemiBold';
+`
