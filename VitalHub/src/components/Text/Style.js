@@ -8,6 +8,7 @@ export const Subtitle = styled.Text`
     text-align: center;
     margin-bottom: 25px;
     width: 90%;
+   
 `
 
 export const Label = styled.Text`
@@ -17,3 +18,16 @@ export const Label = styled.Text`
     font-family: 'Quicksand_600SemiBold';
     
 `
+export const WelcomeDoctor = styled.Text`
+    font-size: 14px;
+    font-family: 'Quicksand_500Medium';
+    margin-top: 70px;
+    margin-left: 10px;
+    color: gray;
+`
+export const NomeDoctor = styled.Text`
+    font-size: 16px;
+    color: white;
+    font-family: 'MontserratAlternates_600SemiBold';
+    margin-left: 10px;
+    `

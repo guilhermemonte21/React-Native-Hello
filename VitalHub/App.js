@@ -6,7 +6,9 @@ import {
   useFonts,
   MontserratAlternates_700Bold,
   MontserratAlternates_500Medium,
-  MontserratAlternates_600SemiBold
+  MontserratAlternates_600SemiBold,
+  Quicksand_500Medium,
+    Quicksand_600SemiBold
 } from '@expo-google-fonts/montserrat-alternates';
 
 import * as SplashScreen from "expo-splash-screen"
@@ -16,6 +18,7 @@ import { VerificarEmail } from './src/screens/VerificarEmail/VerificarEmail';
 import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { CriarConta } from './src/screens/CriarConta/CriarConta';
 import { Perfil } from './src/screens/Perfil/Perfil';
+import { PerfilMedico } from './src/screens/PerfilMedico/PerfilMedico';
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
@@ -23,7 +26,9 @@ export default function App() {
   let [fontsLoaded, fontsError] = useFonts({
     MontserratAlternates_700Bold,
     MontserratAlternates_500Medium,
-    MontserratAlternates_600SemiBold
+    MontserratAlternates_600SemiBold,
+    Quicksand_500Medium,
+    Quicksand_600SemiBold
     
   });
 
@@ -73,6 +78,11 @@ return(
           name="Perfil"
           component={Perfil}
           options={{title: "Perfil"}}
+        />
+        <Stack.Screen
+          name="PerfilMedico"
+          component={PerfilMedico}
+          options={{title: "PerfilMedico"}}
         />
 
     </Stack.Navigator>
