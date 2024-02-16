@@ -22,3 +22,13 @@ export const ButtonGoogle = styled(Button)`
     flex-direction: row;
     gap: 20px;
 `
+
+export const DoctorButton = styled.TouchableOpacity`
+    width: 100px;
+    height: 39px;
+    border-radius: 5px;
+    border: 2px solid #496BBA;
+    justify-content: center;
+    align-items: center;
+    
+`

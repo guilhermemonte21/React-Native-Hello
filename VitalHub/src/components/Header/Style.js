@@ -1,6 +1,8 @@
 import styled from "styled-components/native";
 import { LinearGradient } from 'expo-linear-gradient';
 
+
+
 export const Header = styled.Image`
     width: 100%;
     height: 280px;
@@ -18,5 +20,17 @@ border-radius: 0px 0px 15px 15px;
 flex-direction: row;
 
 
-/* elevation:20; */
+elevation:10;
+`
+
+export const Card = styled.View`
+    height: 102px;
+    width: 90%;
+    flex-direction: row;
+    shadow-color: #000;
+  shadow-opacity: 1;
+ 
+  shadow-radius: 25px;
+    border: 1px solid transparent;
+    margin-top: 20px;
 `
