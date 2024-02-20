@@ -1,15 +1,19 @@
-import { View } from "react-native"
-import { Card, DoctorHeader } from "../../components/Header/Style"
+import { Text, View } from "react-native"
+import { Card, DoctorHeader, Horario } from "../../components/Header/Style"
 import { DoctorPic, ImageCard, Sininho } from "../../components/Logo/Style"
-import { NomeDoctor, WelcomeDoctor } from "../../components/Text/Style"
-import { Container } from "../../components/Container/Style"
+import { HorarioCard, IdadeCard, Label, NomeDoctor, Subtitle, WelcomeDoctor } from "../../components/Text/Style"
+import { Container, LayoutVerify, Padron } from "../../components/Container/Style"
 import CalendarStrip from "react-native-calendar-strip"
-import { DoctorButton } from "../../components/Button/Styled"
-import { ButtonTitle, ButtonTitleDoc } from "../../components/ButtonTitle/Style"
+import { CancelBtn, DoctorButton } from "../../components/Button/Styled"
+import { ButtonTitle, ButtonTitleCancel, ButtonTitleDoc } from "../../components/ButtonTitle/Style"
+import { useState } from "react"
+import { BtnListAppointment } from "../../components/ButtonListAppointment/ButtonListAppointment"
 
 
 
 export const PerfilMedico = () => {
+
+  const [statusLista,setStatusLista] = useState("pendente")
 
     const localeBrazil = {
         name: 'pt-BR',
@@ -105,32 +109,52 @@ export const PerfilMedico = () => {
         
 
         <View style={{flexDirection:"row", gap:10}}>
-        <DoctorButton>
-        <ButtonTitleDoc>
-                Agendadas
-        </ButtonTitleDoc>
-        </DoctorButton>
+        <BtnListAppointment
+        textButton={"Agendadas"}
+        clickButton={statusLista === "pendente"}
+        onPress={() => setStatusLista("pendente")}
+        />
 
-        <DoctorButton>
-        <ButtonTitleDoc>
-            Realizadas
-        </ButtonTitleDoc>
-        </DoctorButton>
+        <BtnListAppointment
+        textButton={"Realizadas"}
+        clickButton={statusLista === "realizado"}
+        onPress={() => setStatusLista("realizado")}
+        />
 
-        <DoctorButton>
-        <ButtonTitleDoc>
-                Cancelar
-        </ButtonTitleDoc>
-        </DoctorButton>
-        </View>
+        <BtnListAppointment
+        textButton={"Canceladas"}
+        clickButton={statusLista === "cancelado"}
+        onPress={() => setStatusLista("cancelado")}
+        />
+  </View>
+      
 
-
-        <Card>
+           <Card>
+          
             <ImageCard source={require('../../assets/Gsampaiowz.png')} />
+            <Padron>
             <ButtonTitle style={{color:"Black", marginLeft:10, marginTop: 10}}>Biel Sampaio</ButtonTitle>
+            <IdadeCard>21 Anos  * Rotina</IdadeCard>
+            <Horario>
+              <HorarioCard> 19:00</HorarioCard>
+              </Horario>
+            </Padron>
+            <CancelBtn>
+              <ButtonTitleCancel>Cancelar</ButtonTitleCancel>
+            </CancelBtn>
         </Card>
         <Card>
             <ImageCard source={require('../../assets/PacienteGu.png')} />
+            <Padron>
+            <ButtonTitle style={{color:"Black", marginLeft:10, marginTop: 10}}>Gu Magal</ButtonTitle>
+            <IdadeCard>46 Anos  * Urgente</IdadeCard>
+            <Horario>
+              <HorarioCard> 21:00</HorarioCard>
+              </Horario>
+            </Padron>
+            <CancelBtn>
+              <ButtonTitleCancel>Cancelar</ButtonTitleCancel>
+            </CancelBtn>
         </Card>
         
             </Container>

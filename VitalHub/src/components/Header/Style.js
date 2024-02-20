@@ -27,10 +27,25 @@ export const Card = styled.View`
     height: 102px;
     width: 90%;
     flex-direction: row;
+    
+    background-color: #fff;
+    border-radius: 5px;
     shadow-color: #000;
-  shadow-opacity: 1;
- 
+  shadow-opacity: 0.08;
+  shadow-offset: -2px  4px;
   shadow-radius: 25px;
-    border: 1px solid transparent;
+  elevation: 10;
     margin-top: 20px;
+`
+export const Horario = styled.TouchableOpacity`
+    height: 26px;
+    width: 100px;
+    background-color: #E8FCFD;
+    border-radius:5px;
+    color: #49B3BA;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    
 `

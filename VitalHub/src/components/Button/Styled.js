@@ -32,3 +32,10 @@ export const DoctorButton = styled.TouchableOpacity`
     align-items: center;
     
 `
+export const CancelBtn = styled.TouchableOpacity`
+    
+    
+    font-family: "MontserratAlternates_500Medium";
+    margin-top: 68px;
+    margin-right: 15px;
+`

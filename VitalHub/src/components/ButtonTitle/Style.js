@@ -15,3 +15,8 @@ export const ButtonTitleDoc = styled.Text`
     text-transform: uppercase;
     color: #496BBA;
 `
+export const ButtonTitleCancel = styled.Text`
+    font-size: 12px;
+    font-family: "MontserratAlternates_500Medium";
+    color: red;
+`

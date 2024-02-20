@@ -31,3 +31,15 @@ export const NomeDoctor = styled.Text`
     font-family: 'MontserratAlternates_600SemiBold';
     margin-left: 10px;
     `
+    export const IdadeCard = styled.Text`
+        font-family: "Quicksand_500Medium";
+        font-size: 14px;
+        color: #8C8A97;
+        margin-left: 10px;
+        margin-top: 5px;
+    `
+    export const HorarioCard = styled.Text`
+        font-size: 14px;
+        color: #49B3BA;
+        font-family: "Quicksand_600SemiBold";
+    `

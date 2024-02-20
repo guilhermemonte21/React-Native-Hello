@@ -27,3 +27,7 @@ export const ContainerPerfl = styled.ScrollView`
     /* align-items: center; */
     background-color: #FAFAFA ;
 `
+export const Padron = styled.SafeAreaView`
+    flex: 1;
+    
+`
