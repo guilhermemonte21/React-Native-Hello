@@ -8,12 +8,26 @@ import { CancelBtn, DoctorButton } from "../../components/Button/Styled"
 import { ButtonTitle, ButtonTitleCancel, ButtonTitleDoc } from "../../components/ButtonTitle/Style"
 import { useState } from "react"
 import { BtnListAppointment } from "../../components/ButtonListAppointment/ButtonListAppointment"
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard"
+import { ListComponent } from "../../components/ListComponent/ListComponent"
+import { CancelationModal } from "../../components/CancellationModal/CancelationModal"
+
+const Consultas = [
+  {id:1, nome: "Guilherme", situacao: "pendente"},
+  {id:2, nome: "Guilherme", situacao: "realizado"},
+  {id:3, nome: "Guilherme", situacao: "cancelado"}
+]
 
 
 
 export const PerfilMedico = () => {
 
+  //state para o estado da lista(cards)
   const [statusLista,setStatusLista] = useState("pendente")
+
+  //state para a exibicao dos modais
+  const [showModalCancel, setshowModalCancel] = useState(false);
+  const[showModalAppointment, setshowModalAppointment] = useState(false)
 
     const localeBrazil = {
         name: 'pt-BR',
@@ -128,8 +142,21 @@ export const PerfilMedico = () => {
         />
   </View>
       
+  <ListComponent
+            data={Consultas}
+            keyExtractor={(item) => item.id}
+            renderItem={({item}) =>
+            statusLista == item.situacao && (
+                <AppointmentCard
+                situacao={item.situacao}
+                onPressCancel={() => setshowModalCancel(true)}
+                onPressAppointment={()=> setshowModalAppointment(true)}
+                />
+            )
+            }
+            />
 
-           <Card>
+           {/* <Card>
           
             <ImageCard source={require('../../assets/Gsampaiowz.png')} />
             <Padron>
@@ -155,8 +182,12 @@ export const PerfilMedico = () => {
             <CancelBtn>
               <ButtonTitleCancel>Cancelar</ButtonTitleCancel>
             </CancelBtn>
-        </Card>
+        </Card> */}
         
+        <CancelationModal
+          visible={showModalCancel}
+          setshowModalCancel={setshowModalCancel}
+        />
             </Container>
     )
 }
