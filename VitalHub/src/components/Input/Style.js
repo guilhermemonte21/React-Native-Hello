@@ -30,3 +30,18 @@ export const InputPerfil =styled.TextInput`
     padding-left: 20px;
     font-family: 'MontserratAlternates_600SemiBold';
 `
+
+export const InsercaoInput = styled.TextInput`
+    height: 121px;
+    width: 90%;
+    padding-left: 10px;
+    padding-bottom: 70px;
+    border: 3px solid #49B3BA;
+    border-radius: 5px;
+    font-family: 'MontserratAlternates_600SemiBold';
+`
+export const InputInsercao2 = styled(Input)`
+    margin-top: 0;
+    color: #34898f;
+   
+`

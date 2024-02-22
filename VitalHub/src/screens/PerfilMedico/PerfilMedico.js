@@ -11,6 +11,7 @@ import { BtnListAppointment } from "../../components/ButtonListAppointment/Butto
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard"
 import { ListComponent } from "../../components/ListComponent/ListComponent"
 import { CancelationModal } from "../../components/CancellationModal/CancelationModal"
+import { AppointmentModal } from "../../components/AppointmentModal/AppointmentModal"
 
 const Consultas = [
   {id:1, nome: "Guilherme", situacao: "pendente"},
@@ -156,37 +157,16 @@ export const PerfilMedico = () => {
             }
             />
 
-           {/* <Card>
-          
-            <ImageCard source={require('../../assets/Gsampaiowz.png')} />
-            <Padron>
-            <ButtonTitle style={{color:"Black", marginLeft:10, marginTop: 10}}>Biel Sampaio</ButtonTitle>
-            <IdadeCard>21 Anos  * Rotina</IdadeCard>
-            <Horario>
-              <HorarioCard> 19:00</HorarioCard>
-              </Horario>
-            </Padron>
-            <CancelBtn>
-              <ButtonTitleCancel>Cancelar</ButtonTitleCancel>
-            </CancelBtn>
-        </Card>
-        <Card>
-            <ImageCard source={require('../../assets/PacienteGu.png')} />
-            <Padron>
-            <ButtonTitle style={{color:"Black", marginLeft:10, marginTop: 10}}>Gu Magal</ButtonTitle>
-            <IdadeCard>46 Anos  * Urgente</IdadeCard>
-            <Horario>
-              <HorarioCard> 21:00</HorarioCard>
-              </Horario>
-            </Padron>
-            <CancelBtn>
-              <ButtonTitleCancel>Cancelar</ButtonTitleCancel>
-            </CancelBtn>
-        </Card> */}
+           
         
         <CancelationModal
           visible={showModalCancel}
           setshowModalCancel={setshowModalCancel}
+        />
+
+        <AppointmentModal 
+          visible={showModalAppointment}
+          setshowModalAppointment={setshowModalAppointment}
         />
             </Container>
     )

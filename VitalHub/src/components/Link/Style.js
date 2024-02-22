@@ -18,4 +18,5 @@ export const LinkCode = styled(LinkMedium)`
     font-size:16px;
     align-items: center;
     align-self: center;
+    margin-top: 10px;
 `

@@ -5,10 +5,12 @@ import { Login } from './src/screens/Login/Login';
 import {
   useFonts,
   MontserratAlternates_700Bold,
-  MontserratAlternates_500Medium,
-  MontserratAlternates_600SemiBold,
-  Quicksand_500Medium,
-    Quicksand_600SemiBold
+    MontserratAlternates_500Medium,
+    MontserratAlternates_600SemiBold,
+    Quicksand_500Medium,
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
+    
 } from '@expo-google-fonts/montserrat-alternates';
 
 import * as SplashScreen from "expo-splash-screen"
@@ -19,6 +21,7 @@ import { RedefinirSenha } from './src/screens/RedefinirSenha/RedefinirSenha';
 import { CriarConta } from './src/screens/CriarConta/CriarConta';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { PerfilMedico } from './src/screens/PerfilMedico/PerfilMedico';
+import { InsercaoProntuario } from './src/screens/InsercaoProntuario/InsercaoProntuario';
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
@@ -28,7 +31,8 @@ export default function App() {
     MontserratAlternates_500Medium,
     MontserratAlternates_600SemiBold,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_400Regular
     
   });
 
@@ -83,6 +87,11 @@ return(
           name="PerfilMedico"
           component={PerfilMedico}
           options={{title: "PerfilMedico"}}
+        />
+        <Stack.Screen
+          name="InsercaoProntuario"
+          component={InsercaoProntuario}
+          options={{title: "InsercaoProntuario"}}
         />
 
     </Stack.Navigator>
