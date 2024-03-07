@@ -22,6 +22,7 @@ import { CriarConta } from './src/screens/CriarConta/CriarConta';
 import { Perfil } from './src/screens/Perfil/Perfil';
 import { PerfilMedico } from './src/screens/PerfilMedico/PerfilMedico';
 import { InsercaoProntuario } from './src/screens/InsercaoProntuario/InsercaoProntuario';
+import { Main } from './src/screens/Main/Main';
 
 const Stack = createNativeStackNavigator();
 // SplashScreen.preventAutoHideAsync();
@@ -48,16 +49,16 @@ return(
 
   <NavigationContainer>
     <Stack.Navigator>
+    <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{title: "Login"}}
+        />
       <Stack.Screen
-        name="Navegacao"
-        component={Navegacao}
-        options={{ title: "Navegacao" }}
+        name='Main'
+        component={Main}
       />
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{ title: "Login" }}
-      />
+      
        <Stack.Screen
           name="RecuperarSenha"
           component={RecuperarSenha}

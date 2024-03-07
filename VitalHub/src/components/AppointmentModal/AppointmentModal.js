@@ -7,13 +7,19 @@ import { ButtonTitle, ButtonTitleGoogle } from "../ButtonTitle/Style"
 import { LinkCode } from "../Link/Style"
 import { ImgAppointment, SubtitleAppointment } from "./style"
 import { InsercaoProntuario } from "../../screens/InsercaoProntuario/InsercaoProntuario"
+import { useNavigation } from "@react-navigation/native"
+import { useState } from "react"
 
 export const AppointmentModal = ({
-    navigation,
+    
     visible,
     setshowModalAppointment,
     ...rest
 }) => {
+
+    const navigation = useNavigation()
+
+
     return(
         <Modal {...rest} visible={visible}  transparent={true} animationType="fade">
 
@@ -29,7 +35,7 @@ export const AppointmentModal = ({
                 <SubtitleAppointment>22 anos          gu.magal@gmail.com</SubtitleAppointment>
 
 
-                <Button>
+                <Button  onPress={() => navigation.navigate("InsercaoProntuario")}>
                     <ButtonTitle >
                         Inserir Prontuario
                     </ButtonTitle>

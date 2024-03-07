@@ -8,7 +8,11 @@ import { Button, ButtonGoogle } from "../../components/Button/Styled"
 import { ButtonTitle, ButtonTitleGoogle } from "../../components/ButtonTitle/Style"
 import { ContentAccount, TextAccount } from "./Style"
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
+
+    async function Login() {
+        navigation.navigate("Main")
+    }
     return (
         <Container>
             <Logo
@@ -29,9 +33,9 @@ export const Login = () => {
 
             
            
-            <LinkMedium>Esqueceu a senha?</LinkMedium>
+            <LinkMedium onPress={(e) => navigation.replace("RecuperarSenha")}>Esqueceu a senha?</LinkMedium>
 
-            <Button>
+            <Button onPress={(e) => Login()}>
                 <ButtonTitle>Entrar</ButtonTitle>
             </Button>
 
@@ -43,7 +47,7 @@ export const Login = () => {
             </ButtonGoogle>
             <ContentAccount>
         <TextAccount>
-          Não tem conta? <LinkBold>Crie uma conta agora!</LinkBold>
+          Não tem conta? <LinkBold onPress={() => navigation.replace("CriarConta")}>Crie uma conta agora!</LinkBold>
         </TextAccount>
       </ContentAccount>
         </Container>

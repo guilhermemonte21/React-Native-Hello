@@ -27,3 +27,11 @@ export const ImageCard = styled.Image`
     margin-top: 12px;
     margin-left: 10px;
 `
+
+export const ArrowPic = styled.Image`
+    height: 25px;
+    width: 25px;
+    margin-top: 20px;
+    margin-left:10px;
+    align-self: flex-start;
+`

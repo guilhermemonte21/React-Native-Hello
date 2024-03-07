@@ -29,6 +29,7 @@ export const PerfilMedico = () => {
   //state para a exibicao dos modais
   const [showModalCancel, setshowModalCancel] = useState(false);
   const[showModalAppointment, setshowModalAppointment] = useState(false)
+  const [profile, useProfile] = useState("Paciente")
 
     const localeBrazil = {
         name: 'pt-BR',
@@ -151,6 +152,7 @@ export const PerfilMedico = () => {
                 <AppointmentCard
                 situacao={item.situacao}
                 onPressCancel={() => setshowModalCancel(true)}
+                
                 onPressAppointment={()=> setshowModalAppointment(true)}
                 />
             )

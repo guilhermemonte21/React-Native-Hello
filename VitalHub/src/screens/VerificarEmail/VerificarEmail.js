@@ -9,7 +9,7 @@ import { InputVerify } from "../../components/input/Style"
 
 import { ContainerVerify } from "./Style"
 
-    export const VerificarEmail = () => {
+    export const VerificarEmail = ({ navigation }) => {
         return(
             <ContainerVerify>
                 <Logo
@@ -39,7 +39,7 @@ import { ContainerVerify } from "./Style"
                 />
                 </LayoutVerify>
 
-                <Button >
+                <Button onPress={() => navigation.replace("RedefinirSenha")}>
                     <ButtonTitle>Continuar</ButtonTitle>
                 </Button>
                 
