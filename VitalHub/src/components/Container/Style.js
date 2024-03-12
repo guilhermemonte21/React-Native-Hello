@@ -31,3 +31,10 @@ export const Padron = styled.SafeAreaView`
     flex: 1;
     
 `
+export const LocalContainer = styled.View`
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+`
